@@ -1,0 +1,100 @@
+# compiler
+F90      = ftn
+
+# linker
+LD       = $(F90)
+
+# global compilation flags
+FFLAGS   = -mieee-fp # Use IEEE division, optionally enable traps
+#FFLAGS  += -Mfree # Assume free-format source
+#FFLAGS  += -Mdclchk # check that all variables are declared
+FFLAGS  += -convert big_endian # swap byte-order for unformatted input/output 
+
+# verbose compilation flags
+VFLAGS   = -v # displays invocations of compiler, assembler and linker
+VFLAGS  += -Minform=inform # display all error messages (inform, warn, severe and fatal)
+VFLAGS  += -Minfo=all # display all information (accel,inline,ipa,loop,lre,mp,opt,par,vect)
+VFLAGS  += -Mneginfo=all # display all negative information (see above)
+#VFLAGS  += -Mkeepasm # preserve assembly language file
+
+# force preprocessing flags
+PFLAGS   = -fpp # perform preprocessing for all source files
+
+# optimization flags (FOPT0=none, FOPT1=strong, FOPT2=strongest)
+FOPT0    = -O0 # inhibit any optimizations
+
+FOPT1    =  # aggressive global optimization
+FOPT1   += -xAVX # common optimizations (includes -O2 -Mvect=sse -Mlre -Mautoinline)
+#FOPT1   += -Mvect=noassoc # dissallow associative transformations (OBSOLETE?)
+#FOPT1   += -Mvect=noaltcode # generate only vectorized code
+#FOPT1   += -Msmartalloc # enable optimized malloc routines
+#FOPT1   += -Mprefetch=distance:8 # set prefetch-ahead distance in cache lines
+#FOPT1   += -Mipa=fast,inline # interprocedural analysis (automatically inline)
+
+FOPT2    = $(FOPT1)
+
+# debugging flags
+#FDBG     = -O0 # inhibit any optimizations
+#FDBG    += -check arg_temp_created,bounds,pointers,stack,uninit #format left out
+#FDBG    += -g # generate information for debugger (disable optimizations)
+##FDBG    += -fpe0 # enable floating point exceptions (inv,divz,ovf)
+#FDBG    += -traceback # add debug information for runtime traceback
+#FDBG    += -check noarg_temp_created
+##FDBG    += -ftrapuv # initialize stack local variables to unusual values
+##FDBG    += -Mstandard # check standard conformance
+
+#my debugging flags
+FDBG     = -O0 # inhibit any optimizations
+FDBG    += -g # create symbols for debugging
+FDBG    += -debug all # generates complete debugging information
+FDBG    += -check all # enables all check options
+FDBG    += -traceback # tells the compiler to generate extra information in the object file to provide source file 
+                      # traceback information when a severe error occurs at run time
+#FDBG    += -warn unused # determines whether warnings occur for declared variables that are never used
+#FDBG    += -warn declarations # determines whether warnings occur for any undeclared names
+#FDBG    += -warn alignments # determines whether warnings occur for data that is not naturally aligned
+#FDBG    += -warn ignore_loc # determines whether warnings occur when %LOC is stripped from an actual argument
+#FDBG    += -warn usage # determines whether warnings occur for questionable programming practices
+#FDBG    += -warn truncated_source # determines whether warnings occur when source exceeds the maximum column width in fixed-format files
+#FDBG    += -error-limit 1000 # prevents compilation from terminating when too many errors are detected
+#FDBG    += -extended-source 132 # prevents warnings due to line tuncation (hopefully only caused by comments...)
+#FDBG   += -fpe0 -vec-report0 -implicitnone -warn argument_checking # additional options used in stephan's debugging settings;
+
+# global linking flags
+LFLAGS   = -convert big_endian # swap byte-order for unformatted input/output (== -Mbyteswapio)
+
+# global libraries and includes
+LIB      = -L/users/luethi/daint/clm_code/conv_ifs/lib -lconv_ifs-intel
+
+INC      = -I.
+INC     += -I$(ROOT)/$(SRCDIR)  
+INC     += -I$(MPICH_DIR)/include
+INC     += -I/users/luethi/daint/clm_code/conv_ifs/include
+# optimized flags, libraries and includes
+OPTL     = 
+OPTI     = 
+
+# debugging flags, libraries and includes
+DBGL     = 
+DBGI     = 
+
+# MPI library
+MPIL     = 
+MPII     = -D__MPICH2
+
+# Database library
+DBL      = 
+DBI      = 
+
+# Grib1 library
+GRIBDWDL = -L/users/luethi/lib -lgrib1-daint-intel
+GRIBDWDI = 
+
+# NetCDF library
+NETCDFL  = 
+NETCDFI  = 
+
+# Synsat library
+RTTOV7L  = -L/users/luethi/lib -lRTTOV7_synsat-intel
+RTTOV7I  = 
+

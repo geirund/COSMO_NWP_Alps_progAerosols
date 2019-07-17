@@ -1,0 +1,65 @@
+Instructions to compile
+=======================
+
+Assuming you want to compile the model using compiler named COMP on the machine names MACH.
+
+1) module switch PrgEnv-cray PrgEnv-gnu
+2) module switch gcc/4.8.2
+2) module load cray-netcdf
+3) Make a link of the Options.XXX.gnu to Options (e.g. ln -s Options.lema.pgi Options)
+4) "make -j6 pardebug" (for debugging) or "make -j6 paropt" (for production)
+
+Make sure you have compiled the auxiliary libraries "libgrib1" and "librttov7" (see below).
+
+
+Instructions to compile in single precision
+===========================================
+
+* GNU compiler
+  - Uncomment the line "PFLAGS += -DSINGLEPRECISION" in Options.XXX.gnu (that's the switch!)
+  - "ln -s Options.XXX.gnu Options"
+  - "make clean"
+  - "make -j6 pardebug" OR "make -j6 paropt"
+
+* PGI compiler
+  - Make sure you have switched to pgi/13.6.0 from the default (see above)
+  - Uncomment the line "PFLAGS += -DSINGLEPRECISION" in Options.XXX.pgi (that's the switch!)
+  - "ln -s Options.XXX.pgi Options"
+  - "make clean"
+  - "make -j6 pardebug" OR "make -j6 paropt"
+
+
+Checklist of things to do for a trunk check-in
+==============================================
+
+1) Checkout latest trunk to make sure you are at the head before starting to work
+2) Make your modifications to the source code (most often by merging a tested branch from the SVN).
+3) Compile (see above)
+4) Check correctness of executable using the testsuite (see test/testsuite/README for details)
+5) Make sure executable runs on a COSMO-1 and COSMO-E test run (both in debug mode for short simulation
+   period and in optimized mode for a full simulation)
+6) Go to src/ and do a "svn revert info_lm_f90.f90" unless actual changes have been made to this file
+7) Run "svn propset svn:keywords "Revision Date" *" on new source files
+8) Update misc.mch file in the doc directory with local changes (this should also be
+   in the log of the commit)
+9) Increase version number in misc.mch file and setup template for next version (X.XnX)
+10) Increase version number in bin/gen_info.sh to current version
+11) Commit changes to trunk (svn commit) using the text you added in misc.mch for the SVN log message
+
+   svn commit  [in same directory where the Makefile is contained]
+
+12) Copy from trunk to tags (make sure that nobody else commited to trunk in the meantime).
+   NOTE: in case you have forgotten something and you need to make modifications, do not checkin
+   anything into the tags! Delete the tag and copy again from the trunk!
+
+   svn copy <...>/trunk <...>/trunk_tags/X.XnX
+
+13) Tell osm to put executable into regular COSMO-E and COSMO-1 runs
+
+Some other useful tips
+======================
+
+1) In order to check consistency of namelists with source code you can use
+
+   check_ftn_nl.rb -s ./src INPUT_*
+
