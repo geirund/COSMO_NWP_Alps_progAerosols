@@ -1495,10 +1495,20 @@ debug3(:,:,10)=w1+w2+w3+w4+w5+w6+w7+w8+w9+w10+w11+w12+w13+w14+w15
         wccn1=weight_wCCN*wccn1
         wccn2=weight_wCCN*wccn2
         wccn3=weight_wCCN*wccn3
-        print *,'Going in loop to restrict weight, wccn1 =', wccn1
+        !print *,'Going in loop to restrict weight, wccn1 =', wccn1
       endif
     endif
   ENDIF
+
+  if (ntstep > tperturb*3600/dt .AND. (ntstep-2 < tperturb*3600/dt .OR. ntstep-2 <0)) then               
+      !perturb for 30 min                                                                                    
+      !if (ntstep > tperturb*3600/dt .AND. (ntstep-900 < tperturb*3600/dt .OR. ntstep-2 <0)) then            
+      ccn3(:,:,:)= ccn3(:,:,:)+CCN_ship_N                                                                  
+      do k=1,ke                                                                                            
+        sumCCN3_t0=sumCCN3_t0+ie_tot*je_tot*dz_dom(k)*CCN_ship_N                                            
+        sumCCN_t0=sumCCN_t0+ie_tot*je_tot*dz_dom(k)*CCN_ship_N                                              
+      end do                                                                                               
+  endif     
 
   ! Delete values of the precipitation rate from last timestep:
   prr_gsp = 0.0_wp
