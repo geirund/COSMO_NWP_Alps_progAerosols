@@ -1,6 +1,6 @@
 V33 :0x4 src_obs_cdfin_print
-66 /users/dedekind/code/yves_gesa_inp_ccn/src/src_obs_cdfin_print.f90 S624 0
-07/07/2019  22:41:47
+68 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_obs_cdfin_print.f90 S624 0
+07/17/2019  16:51:28
 use iso_c_binding private
 use src_obs_cdfin_util private
 use parallel_utilities private

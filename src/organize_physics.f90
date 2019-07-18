@@ -2785,7 +2785,7 @@ SUBROUTINE readCCNconc(ccn1,ccn2,ccn3,ie,je,ke)
 
 
   CCN_1_N=0.0_wp
-  CCN_2_N=250e06_wp
+  CCN_2_N=500e06_wp
   CCN_3_N=0.0_wp
   ccn1(:,:,:)=CCN_1_N         !largest size mode
   ccn2(:,:,:)=CCN_2_N         !second largest size mode

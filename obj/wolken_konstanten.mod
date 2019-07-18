@@ -1,6 +1,6 @@
 V33 :0x4 wolken_konstanten
-60 /users/dedekind/code/yves_gesa_inp_ccn/src/src_twomom_sb.f90 S624 0
-07/07/2019  22:41:38
+62 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_twomom_sb.f90 S624 0
+07/17/2019  16:51:18
 enduse
 D 56 24 627 112 625 7
 D 62 18 12

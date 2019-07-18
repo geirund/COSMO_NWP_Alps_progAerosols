@@ -1,6 +1,6 @@
 V33 :0x4 src_setup_vartab
-63 /users/dedekind/code/yves_gesa_inp_ccn/src/src_setup_vartab.f90 S624 0
-07/07/2019  22:41:35
+65 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_setup_vartab.f90 S624 0
+07/17/2019  16:51:14
 use iso_c_binding private
 use environment private
 use data_fields private

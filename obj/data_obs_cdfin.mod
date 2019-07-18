@@ -1,6 +1,6 @@
 V33 :0x4 data_obs_cdfin
-61 /users/dedekind/code/yves_gesa_inp_ccn/src/data_obs_cdfin.f90 S624 0
-07/07/2019  22:41:29
+63 /users/geirund/code/cosmo_nwp_progCCNINP/src/data_obs_cdfin.f90 S624 0
+07/17/2019  16:51:07
 use netcdf public 0 direct
 use data_parameters private
 use mo_kind private

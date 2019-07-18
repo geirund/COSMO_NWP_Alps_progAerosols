@@ -18121,19 +18121,19 @@ END IF
 !          END IF
 !<<OCH
           if (lCCNprog .AND. nuc_n >0) then
-           if (nuc_n <= ccn_n1) then
-            ccn_n1=ccn_n1 - nuc_n
-           else if (nuc_n > ccn_n1) then
-            nuc_n=nuc_n - ccn_n1
-            ccn_n1=0.0_wp
+           if (nuc_n <= ccn_n3) then   !if perturbation mode is largest, this should activate first
+            ccn_n3=ccn_n3 - nuc_n
+           else if (nuc_n > ccn_n3) then
+            nuc_n=nuc_n - ccn_n3
+            ccn_n3=0.0_wp
             if (nuc_n <= ccn_n2) then
              ccn_n2=ccn_n2 - nuc_n
             else if (nuc_n > ccn_n2) then
              nuc_n=nuc_n - ccn_n2
              ccn_n2=0.0_wp
-             if (nuc_n <= ccn_n3) then
-              ccn_n3=ccn_n3 - nuc_n
-             else if (nuc_n > ccn_n3) then
+             if (nuc_n <= ccn_n1) then
+              ccn_n1=ccn_n1 - nuc_n
+             else if (nuc_n > ccn_n1) then
               ccn_n1=0.0_wp
               ccn_n2=0.0_wp
               ccn_n3=0.0_wp

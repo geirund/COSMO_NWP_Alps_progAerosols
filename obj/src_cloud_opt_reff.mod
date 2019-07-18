@@ -1,6 +1,6 @@
 V33 :0x4 src_cloud_opt_reff
-65 /users/dedekind/code/yves_gesa_inp_ccn/src/src_cloud_opt_reff.f90 S624 0
-07/07/2019  22:43:31
+67 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_cloud_opt_reff.f90 S624 0
+07/17/2019  16:53:22
 use data_modelconfig private
 use data_radiation private
 use data_parallel private

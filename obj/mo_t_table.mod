@@ -1,6 +1,6 @@
 V33 :0x4 mo_t_table
-57 /users/dedekind/code/yves_gesa_inp_ccn/src/mo_t_table.f90 S624 0
-07/07/2019  22:41:28
+59 /users/geirund/code/cosmo_nwp_progCCNINP/src/mo_t_table.f90 S624 0
+07/17/2019  16:51:05
 enduse
 D 56 24 643 96 626 3
 D 62 18 12

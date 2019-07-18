@@ -1,6 +1,6 @@
 V33 :0x4 src_sfcana
-57 /users/dedekind/code/yves_gesa_inp_ccn/src/src_sfcana.f90 S624 0
-07/07/2019  22:42:09
+59 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_sfcana.f90 S624 0
+07/17/2019  16:51:51
 use vgrid_refatm_utils private
 use iso_c_binding private
 use io_metadata private

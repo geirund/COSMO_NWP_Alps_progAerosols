@@ -1,6 +1,6 @@
 V33 :0x4 mo_fdbk_tables
-61 /users/dedekind/code/yves_gesa_inp_ccn/src/mo_fdbk_tables.f90 S624 0
-07/07/2019  22:41:28
+63 /users/geirund/code/cosmo_nwp_progCCNINP/src/mo_fdbk_tables.f90 S624 0
+07/17/2019  16:51:05
 use mo_t_table private
 enduse
 D 56 24 654 96 643 3

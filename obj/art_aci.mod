@@ -1,6 +1,6 @@
 V33 :0x4 art_aci
-54 /users/dedekind/code/yves_gesa_inp_ccn/src/art_aci.f90 S624 0
-07/07/2019  22:41:33
+56 /users/geirund/code/cosmo_nwp_progCCNINP/src/art_aci.f90 S624 0
+07/17/2019  16:51:12
 use art_aci_data private
 use data_modelconfig private
 use data_runcontrol private

@@ -1,6 +1,6 @@
 V33 :0x4 src_sso
-54 /users/dedekind/code/yves_gesa_inp_ccn/src/src_sso.f90 S624 0
-07/07/2019  22:41:30
+56 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_sso.f90 S624 0
+07/17/2019  16:51:08
 use data_runcontrol private
 use data_fields private
 use data_constants private

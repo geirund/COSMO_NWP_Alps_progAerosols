@@ -1,6 +1,6 @@
 V33 :0x4 turbulence_utilities
-67 /users/dedekind/code/yves_gesa_inp_ccn/src/turbulence_utilities.f90 S624 0
-07/07/2019  22:41:32
+69 /users/geirund/code/cosmo_nwp_progCCNINP/src/turbulence_utilities.f90 S624 0
+07/17/2019  16:51:10
 use data_turbulence private
 use data_parameters private
 use mo_kind private

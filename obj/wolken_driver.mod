@@ -1,6 +1,6 @@
 V33 :0x4 wolken_driver
-60 /users/dedekind/code/yves_gesa_inp_ccn/src/src_twomom_sb.f90 S624 0
-07/07/2019  22:41:38
+62 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_twomom_sb.f90 S624 0
+07/17/2019  16:51:18
 use wolken_konstanten public 0 direct
 enduse
 D 56 24 1000 112 999 7

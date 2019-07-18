@@ -1,6 +1,6 @@
 V33 :0x4 mpe_io2
-54 /users/dedekind/code/yves_gesa_inp_ccn/src/mpe_io2.f90 S624 0
-07/07/2019  22:41:28
+56 /users/geirund/code/cosmo_nwp_progCCNINP/src/mpe_io2.f90 S624 0
+07/17/2019  16:51:04
 enduse
 D 58 21 6 1 3 17 0 0 0 0 0
  0 17 3 3 17 17

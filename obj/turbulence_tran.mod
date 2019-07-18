@@ -1,6 +1,6 @@
 V33 :0x4 turbulence_tran
-62 /users/dedekind/code/yves_gesa_inp_ccn/src/turbulence_tran.f90 S624 0
-07/07/2019  22:41:37
+64 /users/geirund/code/cosmo_nwp_progCCNINP/src/turbulence_tran.f90 S624 0
+07/17/2019  16:51:16
 use turbulence_utilities private
 use meteo_utilities private
 use data_turbulence private

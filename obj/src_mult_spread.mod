@@ -1,6 +1,6 @@
 V33 :0x4 src_mult_spread
-62 /users/dedekind/code/yves_gesa_inp_ccn/src/src_mult_spread.f90 S624 0
-07/07/2019  22:41:34
+64 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_mult_spread.f90 S624 0
+07/17/2019  16:51:13
 use src_correl_cutoff private
 use data_nudge_spread private
 use data_nudge_gather private

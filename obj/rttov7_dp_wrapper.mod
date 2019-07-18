@@ -1,6 +1,6 @@
 V33 :0x4 rttov7_dp_wrapper
-64 /users/dedekind/code/yves_gesa_inp_ccn/src/rttov7_dp_wrapper.f90 S624 0
-07/07/2019  22:41:32
+66 /users/geirund/code/cosmo_nwp_progCCNINP/src/rttov7_dp_wrapper.f90 S624 0
+07/17/2019  16:51:11
 use data_parameters private
 use mo_kind private
 enduse

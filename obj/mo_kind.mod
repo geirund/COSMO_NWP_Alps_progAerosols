@@ -1,6 +1,6 @@
 V33 :0x4 mo_kind
-54 /users/dedekind/code/yves_gesa_inp_ccn/src/mo_kind.f90 S624 0
-07/07/2019  22:41:28
+56 /users/geirund/code/cosmo_nwp_progCCNINP/src/mo_kind.f90 S624 0
+07/17/2019  16:51:05
 enduse
 S 624 24 0 0 0 6 1 0 5015 5 0 A 0 0 0 0 B 0 9 0 0 0 0 0 0 0 0 0 0 86 0 0 0 0 0 0 0 0 9 0 0 0 0 0 0 mo_kind
 S 625 16 1 0 0 6 628 624 5023 800004 400000 A 0 0 0 0 B 0 43 0 0 0 0 0 0 8 15 0 0 0 0 0 0 0 0 0 0 0 0 0 624 0 0 0 0 dp

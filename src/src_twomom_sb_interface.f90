@@ -1499,12 +1499,13 @@ debug3(:,:,10)=w1+w2+w3+w4+w5+w6+w7+w8+w9+w10+w11+w12+w13+w14+w15
       endif
     endif
   ENDIF
-
-  if (ntstep > tperturb*3600/dt .AND. (ntstep-2 < tperturb*3600/dt .OR. ntstep-2 <0)) then               
-      !perturb for 30 min                                                                                    
-      !if (ntstep > tperturb*3600/dt .AND. (ntstep-900 < tperturb*3600/dt .OR. ntstep-2 <0)) then            
-      ccn3(:,:,:)= ccn3(:,:,:)+CCN_ship_N                                                                  
-      do k=1,ke                                                                                            
+  
+  !perturb for 1 timestep (then ntstep-2 is smaller than 0 or perturbation time)
+  !if (ntstep > tperturb*3600/dt .AND. (ntstep-2 < tperturb*3600/dt .OR. ntstep-2 <0)) then               
+  !perturb for 14 h                                                                                    
+  if (ntstep > tperturb*3600/dt .AND. (ntstep-25202 < tperturb*3600/dt .OR. ntstep-25202 <0)) then
+      ccn3(60:42,100:510,0:200)= ccn3(:,:,:)+CCN_ship_N  !only prescribe CCN in right part of domain, leave rest 0
+      do k=1,ke           
         sumCCN3_t0=sumCCN3_t0+ie_tot*je_tot*dz_dom(k)*CCN_ship_N                                            
         sumCCN_t0=sumCCN_t0+ie_tot*je_tot*dz_dom(k)*CCN_ship_N                                              
       end do                                                                                               

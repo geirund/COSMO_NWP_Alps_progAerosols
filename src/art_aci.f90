@@ -199,7 +199,7 @@ IF(lconst_aero_distr) THEN   !20140519 cwalter
   if (lCCNprog) then
     activ_modes(CCN_C)%number    = ccn_n3     ! is it possible to convert double precision to wp?!
   else
-    activ_modes(CCN_C)%number    = 0.0_wp
+    activ_modes(CCN_C)%number    = CCN_ship_N
   endif
   activ_modes(CCN_C)%sigma     = 1.59_wp
   activ_modes(CCN_C)%solmassfr = 0.62_wp

@@ -1,6 +1,6 @@
 V33 :0x4 data_parameters
-62 /users/dedekind/code/yves_gesa_inp_ccn/src/data_parameters.f90 S624 0
-07/07/2019  22:41:28
+64 /users/geirund/code/cosmo_nwp_progCCNINP/src/data_parameters.f90 S624 0
+07/17/2019  16:51:05
 use mo_kind private
 enduse
 S 624 24 0 0 0 8 1 0 5015 5 0 A 0 0 0 0 B 0 4 0 0 0 0 0 0 0 0 0 0 194 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 data_parameters

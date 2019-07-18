@@ -1,6 +1,6 @@
 V33 :0x4 src_sat_tbs
-58 /users/dedekind/code/yves_gesa_inp_ccn/src/src_sat_tbs.f90 S624 0
-07/07/2019  22:41:37
+60 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_sat_tbs.f90 S624 0
+07/17/2019  16:51:17
 use parallel_utilities private
 use rttov7_dp_wrapper private
 use data_satellites private

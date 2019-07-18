@@ -1,6 +1,6 @@
 V33 :0x4 src_allocation
-61 /users/dedekind/code/yves_gesa_inp_ccn/src/src_allocation.f90 S624 0
-07/07/2019  22:41:30
+63 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_allocation.f90 S624 0
+07/17/2019  16:51:08
 use data_lhn_diag private
 use data_lheat_nudge private
 use data_parallel private

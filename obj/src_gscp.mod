@@ -1,6 +1,6 @@
 V33 :0x4 src_gscp
-55 /users/dedekind/code/yves_gesa_inp_ccn/src/src_gscp.f90 S624 0
-07/07/2019  22:42:09
+57 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_gscp.f90 S624 0
+07/17/2019  16:51:52
 use data_gscp public 0 direct
 use vgrid_refatm_utils private
 use data_tracer_metadata private

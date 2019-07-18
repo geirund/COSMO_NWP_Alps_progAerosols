@@ -1,6 +1,6 @@
 V33 :0x4 art_activation
-61 /users/dedekind/code/yves_gesa_inp_ccn/src/art_activation.f90 S624 0
-07/07/2019  22:41:31
+63 /users/geirund/code/cosmo_nwp_progCCNINP/src/art_activation.f90 S624 0
+07/17/2019  16:51:09
 use mo_kind private
 enduse
 D 56 21 9 1 70 69 0 1 0 0 1

@@ -1,6 +1,6 @@
 V33 :0x4 src_obs_qc_conv
-62 /users/dedekind/code/yves_gesa_inp_ccn/src/src_obs_qc_conv.f90 S624 0
-07/07/2019  22:41:31
+64 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_obs_qc_conv.f90 S624 0
+07/17/2019  16:51:10
 use mo_fdbk_tables private
 use data_obs_qc_limits private
 use data_obs_record private

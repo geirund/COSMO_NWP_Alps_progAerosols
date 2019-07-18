@@ -1,6 +1,6 @@
 V33 :0x4 mo_netcdf_param
-62 /users/dedekind/code/yves_gesa_inp_ccn/src/mo_netcdf_param.f90 S624 0
-07/07/2019  22:41:28
+64 /users/geirund/code/cosmo_nwp_progCCNINP/src/mo_netcdf_param.f90 S624 0
+07/17/2019  16:51:05
 enduse
 D 58 18 170
 S 624 24 0 0 0 6 1 0 5015 5 0 A 0 0 0 0 B 0 7 0 0 0 0 0 0 0 0 0 0 35 0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 mo_netcdf_param

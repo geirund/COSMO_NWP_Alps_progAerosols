@@ -1,6 +1,6 @@
 V33 :0x4 src_soil
-55 /users/dedekind/code/yves_gesa_inp_ccn/src/src_soil.f90 S624 0
-07/07/2019  22:41:55
+57 /users/geirund/code/cosmo_nwp_progCCNINP/src/src_soil.f90 S624 0
+07/17/2019  16:51:36
 use data_soil public 0 direct
 use data_tracer_metadata private
 use iso_c_binding private
