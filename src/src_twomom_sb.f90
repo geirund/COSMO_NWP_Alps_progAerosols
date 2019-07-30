@@ -18121,7 +18121,7 @@ END IF
 !          END IF
 !<<OCH
           if (lCCNprog .AND. nuc_n >0) then
-           if (nuc_n <= ccn_n3) then   !if perturbation mode is largest, this should activate first
+           if (nuc_n <= ccn_n3) then   !if perturbation mode is largest, this should activate first (adjust to our values)
             ccn_n3=ccn_n3 - nuc_n
            else if (nuc_n > ccn_n3) then
             nuc_n=nuc_n - ccn_n3
