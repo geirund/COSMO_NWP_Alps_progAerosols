@@ -58,7 +58,7 @@ USE data_modelconfig, ONLY :   &
     dt,           & ! timestep
     dt2             ! 2 * dt
 
-USE art_aci_data,  ONLY: nmodes, CLOUD, MINCCN, CCN_A, CCN_B, CCN_C, &
+USE art_aci_data,  ONLY: nmodes, CLOUD, CCN_A, CCN_B, CCN_ship, &
                          act_indices,                       &
                          t_mode_aci_data
 
@@ -82,7 +82,7 @@ SUBROUTINE call_activation(typeact,ii,jj,kk_in,n_cloud,Ntotal,Npact,ccn_n1,ccn_n
  USE art_activation, ONLY : activation_master
  USE environment     ,   ONLY : model_abort
  USE data_parallel   ,   ONLY : my_cart_id
- USE data_runcontrol, ONLY: lCCNprog
+ USE data_runcontrol, ONLY: lCCNprog, CCN_ship_N
  
  IMPLICIT NONE
 
@@ -194,20 +194,20 @@ IF(lconst_aero_distr) THEN   !20140519 cwalter
   activ_modes(CCN_B)%rhosol_mean = 1.78e+03_wp
   activ_modes(CCN_B)%rhoinsol_mean = 2.2e+03_wp
   iact=iact+1
-  act_indices(iact)=CCN_C
-  activ_modes(CCN_C)%l_koehler = .TRUE.
+  act_indices(iact)=CCN_ship
+  activ_modes(CCN_ship)%l_koehler = .TRUE.
   if (lCCNprog) then
-    activ_modes(CCN_C)%number    = ccn_n3     ! is it possible to convert double precision to wp?!
+    activ_modes(CCN_ship)%number    = ccn_n3     ! is it possible to convert double precision to wp?!
   else
-    activ_modes(CCN_C)%number    = CCN_ship_N
+    activ_modes(CCN_ship)%number    = CCN_ship_N
   endif
-  activ_modes(CCN_C)%sigma     = 1.59_wp
-  activ_modes(CCN_C)%solmassfr = 0.62_wp
-  activ_modes(CCN_C)%diameter  = 0.12e-06_wp
-  activ_modes(CCN_C)%dissfac_mean = 2.0_wp ! muss bei seasalts gerechnet werden
-  activ_modes(CCN_C)%molweight_mean = 61.20e-03_wp
-  activ_modes(CCN_C)%rhosol_mean = 1.86e+03_wp
-  activ_modes(CCN_C)%rhoinsol_mean = 2.0e+03_wp
+  activ_modes(CCN_ship)%sigma     = 1.59_wp
+  activ_modes(CCN_ship)%solmassfr = 0.62_wp
+  activ_modes(CCN_ship)%diameter  = 0.12e-06_wp
+  activ_modes(CCN_ship)%dissfac_mean = 2.0_wp ! muss bei seasalts gerechnet werden
+  activ_modes(CCN_ship)%molweight_mean = 61.20e-03_wp
+  activ_modes(CCN_ship)%rhosol_mean = 1.86e+03_wp
+  activ_modes(CCN_ship)%rhoinsol_mean = 2.0e+03_wp
 
 ! Consider cloud/rain droplets in in-cloud activation
   IF(activ_modes(CLOUD)%do_activ) THEN

@@ -33,13 +33,13 @@ IMPLICIT NONE
 INTEGER (KIND=iintegers), PARAMETER   ::  &
          ! nmodes=16,                      &
           !GE
-          nmodes=17,                      &
+          nmodes=4,                      &
           !GE
-          CLOUD=13,                       &
-          MINCCN=14,                      &
-          CCN_A=15,                       &
-          CCN_B=16,                       &
-          CCN_C=17
+          CLOUD=4,                       &
+          !MINCCN=14,                      &
+          CCN_A=1,                       &
+          CCN_B=2,                       &
+          CCN_ship=3
 
 INTEGER (KIND=iintegers) :: act_indices(nmodes)
 

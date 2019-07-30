@@ -57,16 +57,15 @@ PUBLIC :: info_readnl, info_define, info_print, info_getvalue
 ! Following declarations have to be defined just after checkout from the version control system:
 CHARACTER (LEN=*), PARAMETER :: INFO_LibraryName = 'cosmo5.4b.1'
 CHARACTER (LEN=*), PARAMETER :: INFO_RevisionTag = 'https://github.com/geirund/COSMO_NWP_Alps_progAerosols.git'
-CHARACTER (LEN=*), PARAMETER :: INFO_CheckinDate = '2019-07-17 15:35:23 +0200'
-CHARACTER (LEN=*), PARAMETER :: INFO_RevisionNumber = 'd1d9700 @ (HEAD -> yves_setup, origin/yves_setup)'
+CHARACTER (LEN=*), PARAMETER :: INFO_CheckinDate = '2019-07-30 11:50:28 +0200'
+CHARACTER (LEN=*), PARAMETER :: INFO_RevisionNumber = 'e0d910f @ (HEAD -> yves_setup)'
 CHARACTER (LEN=*), PARAMETER :: INFO_CheckoutDate = '(missing)'
 CHARACTER (LEN=*), PARAMETER :: INFO_ProductionDate = '(missing)'
 ! Following declarations have to be defined just before compiling:
-CHARACTER (LEN=*), PARAMETER :: INFO_CodeIsModified = 'true'
+CHARACTER (LEN=*), PARAMETER :: INFO_CodeIsModified = 'false'
 CHARACTER (LEN=*), PARAMETER :: INFO_CompilerCall = 'ftn -D__PGI_FORTRAN__ -Mpreprocess -DNUDGING -D__PGI_FORTRAN__ ' // &
     '-DRTTOV7 -DGRIBDWD -DNETCDF -DTWOMOM_SB -DFOR_LM -Kieee -Mfree -Mdclchk -byteswapio -DHAS_IOMSG -O2'
-CHARACTER (LEN=*), PARAMETER :: INFO_CompilerVersion = 'pgf90 18.5-0 64-bit target on x86-64 Linux -tp ' // &
-    'haswell-64'
+CHARACTER (LEN=*), PARAMETER :: INFO_CompilerVersion = 'pgf90 18.5-0 64-bit target on x86-64 Linux -tp px'
 CHARACTER (LEN=*), PARAMETER :: INFO_DefinedMacros = '-I. ' // &
     '-I/users/geirund/code/cosmo_nwp_progCCNINP/src -I/opt/cray/pe/mpt/7.7.2/gni/mpich-pgi/15.3/include ' // &
     '-I/project/s799/geirund/software/lib -D__MPICH2'
@@ -76,7 +75,7 @@ CHARACTER (LEN=*), PARAMETER :: INFO_LinkOptions = 'ftn -D__PGI_FORTRAN__ -L/pro
     '-L/project/s799/geirund/software/lib -lRTTOV7_synsat_pgi -L/project/s799/geirund/software/lib ' // &
     '-lgrib1_pgi'
 CHARACTER (LEN=*), PARAMETER :: INFO_CompiledBy = 'geirund'
-CHARACTER (LEN=*), PARAMETER :: INFO_CompileTime = 'Wed Jul 17 16:51:04 CEST 2019'
+CHARACTER (LEN=*), PARAMETER :: INFO_CompileTime = 'Tue Jul 30 13:12:19 CEST 2019'
 CHARACTER (LEN=*), PARAMETER :: INFO_CompileMachine = 'daint'
 !
 ! Global Variables:
