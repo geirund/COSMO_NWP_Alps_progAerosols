@@ -173,7 +173,7 @@ IF(lconst_aero_distr) THEN   !20140519 cwalter
   endif
   activ_modes(CCN_A)%sigma     = 1.5_wp
   activ_modes(CCN_A)%solmassfr = 1.0_wp
-  activ_modes(CCN_A)%diameter  = 0.094e-06_wp
+  activ_modes(CCN_A)%diameter  = 0.05e-06_wp
   activ_modes(CCN_A)%dissfac_mean = 1.0_wp ! muss bei seasalts gerechnet werden 
   activ_modes(CCN_A)%molweight_mean = 132.14e-03_wp
   activ_modes(CCN_A)%rhosol_mean = 1.77e+03_wp
@@ -203,7 +203,7 @@ IF(lconst_aero_distr) THEN   !20140519 cwalter
   endif
   activ_modes(CCN_C)%sigma     = 1.59_wp
   activ_modes(CCN_C)%solmassfr = 0.62_wp
-  activ_modes(CCN_C)%diameter  = 0.015e-06_wp
+  activ_modes(CCN_C)%diameter  = 0.12e-06_wp
   activ_modes(CCN_C)%dissfac_mean = 2.0_wp ! muss bei seasalts gerechnet werden
   activ_modes(CCN_C)%molweight_mean = 61.20e-03_wp
   activ_modes(CCN_C)%rhosol_mean = 1.86e+03_wp

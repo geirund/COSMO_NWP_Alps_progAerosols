@@ -18044,7 +18044,7 @@ END IF
             wcb   = w_cb(i,j,k)                                                        
             Ntot = 0.0d0                                                               
             if (lCCNprog) then
-             ! ccn_num2(i,j,k)=80.0e+6_wp   !GE test
+              ccn_num2(i,j,k)=500.0e+6_wp   !GE: make background mode passive
              ! ccn_num1(i,j,k)=0.0_wp
               ccn_n1=ccn_num1(i,j,k)
               ccn_n2=ccn_num2(i,j,k)
